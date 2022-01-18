@@ -276,6 +276,10 @@ p {
   margin-bottom: 1.5rem;
 }
 
+p.plain-text {
+  line-height: 25px;
+}
+
 .extra-big-text {
   font-size: 24px;
   font-style: normal;
@@ -286,10 +290,10 @@ p {
 }
 
 .big-text {
-  font-size: 21px;
+  font-size: 24px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 25px;
+  font-weight: 300;
+  line-height: 28px;
   letter-spacing: 0em;
   text-align: left;
 }
@@ -300,13 +304,11 @@ p {
 }
 
 .small-text {
-  color: #828282;
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 17px;
+  line-height: 19px;
   letter-spacing: 0em;
-  text-align: left;
 }
 
 .ask-question {
@@ -375,11 +377,33 @@ h3,
 h4,
 h5,
 h6,
-.fn {
+.fn,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
   font-family: 'Futura New';
+  font-weight: 300;
 }
 
-h1 {
+.horiz-h {
+  position: relative;
+}
+
+.horiz-h::before {
+  position: absolute;
+  top: 50%;
+  left: -119px;
+  content: '';
+  width: 85px;
+  height: 1px;
+  background-color: #DA5C3E;
+}
+
+h1,
+.h1 {
   font-size: 64px;
   font-style: normal;
   font-weight: 300;
@@ -389,18 +413,23 @@ h1 {
   margin-bottom: 2rem;
 }
 
-h2 {
+h2,
+.h2 {
   font-size: 2rem;
+  font-weight: 300;
   font-style: normal;
   letter-spacing: 0em;
   text-align: left;
   line-height: 100%;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .h3 {
+  font-size: 1.7rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
   font-style: normal;
-  font-weight: 600;
   letter-spacing: 0em;
 }
 
@@ -502,7 +531,7 @@ img {
 .card-title {
   font-size: 18px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 23px;
   letter-spacing: 0em;
   text-align: left;
@@ -624,6 +653,10 @@ picture > * {
   color: #828282;
 }
 
+.modal-content p.plain-text {
+  line-height: 25px;
+}
+
 .modal-content .plain-text {
   color: #828282;
 }
@@ -682,6 +715,15 @@ picture > * {
   line-height: 15px;
   letter-spacing: 0em;
   text-align: left;
+}
+
+.g-45 {
+  --bs-gutter-y: 70px;
+  --bs-gutter-x: 40px;
+}
+
+.gap-45 {
+  gap: 70px 40px;
 }
 
 .gap-0 {
@@ -1144,6 +1186,9 @@ header.white .my-dropdown-menu a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 1rem;
   -webkit-transition: .3s;
   -o-transition: .3s;
@@ -1436,6 +1481,26 @@ nav.breadcrumbs::before {
   font-size: 14px;
 }
 
+.small-banner {
+  padding-top: 4.2rem;
+  padding-bottom: 4.2rem;
+  background: #FFF9E2;
+}
+
+.small-banner__text {
+  max-width: 400px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.anothers {
+  margin-top: 45px;
+}
+
 @media screen and (min-width: 576px) {
   .hstack-sm {
     display: -webkit-box;
@@ -1500,8 +1565,8 @@ nav.breadcrumbs::before {
 
 @media screen and (min-width: 768px) {
   .h3 {
-    font-size: 18px;
-    line-height: 23px;
+    font-size: 36px;
+    line-height: 42px;
   }
 
   .hstack-md {
@@ -1567,6 +1632,14 @@ nav.breadcrumbs::before {
     right: 0;
     top: 0;
   }
+
+  .anothers {
+    margin-top: 85px;
+  }
+
+  .anothers .h2 {
+    margin-bottom: 82px;
+  }
 }
 
 @media (min-width: 991.98px) {
@@ -1577,12 +1650,10 @@ nav.breadcrumbs::before {
 }
 
 @media screen and (min-width: 992px) {
-  h2 {
-    margin-top: 2rem;
-    margin-bottom: 4rem;
+  h2,
+  .h2 {
+    margin-bottom: 1.6rem;
     font-size: 48px;
-    font-style: normal;
-    font-weight: 300;
     line-height: 56px;
     letter-spacing: 0em;
     text-align: left;
@@ -1825,7 +1896,8 @@ nav.breadcrumbs::before {
 }
 
 @media screen and (max-width: 767.9px) {
-  h1 {
+  h1,
+  .h1 {
     font-size: 3rem;
     line-height: 1.2;
   }
@@ -1869,6 +1941,16 @@ nav.breadcrumbs::before {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+  }
+
+  .small-banner {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .small-banner__text {
+    font-size: 1.3rem;
+    line-height: 125%;
   }
 }
 @supports (-webkit-appearance:none){

@@ -93,6 +93,8 @@ a:hover
 
 p
     margin-bottom: 1.5rem
+    &.plain-text
+        line-height: 25px
 .extra-big-text
     font-size: 24px;
     font-style: normal;
@@ -104,26 +106,23 @@ p
 
 
 .big-text
-    font-size: 21px;
+    font-size: 24px;
     font-style: normal;
-    font-weight: 400;
-    line-height: 25px;
+    font-weight: 300;
+    line-height: 28px;
     letter-spacing: 0em;
-    text-align: left
+    text-align: left;
 
 .medium-text
     font-size: 18px
     line-height: 125%
 
 .small-text
-    color: $grey
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 17px;
+    line-height: 19px;
     letter-spacing: 0em;
-    text-align: left;
-
 
 .ask-question
     color: $red
@@ -186,13 +185,23 @@ main
         padding: unset 
 
 
-h1, h2, h3, h4, h5, h6, .fn
+h1, h2, h3, h4, h5, h6, .fn, .h1, .h2, .h3, .h4, .h5, .h6
     font-family: 'Futura New'
+    font-weight: 300
 
-
+.horiz-h
+    position: relative
+    &::before
+        position: absolute
+        top: 50%
+        left: -119px
+        content: ''
+        width: 85px
+        height: 1px
+        background-color: $red
     
 
-h1
+h1, .h1
 
     font-size: 64px;
     font-style: normal;
@@ -207,22 +216,22 @@ h1
 
 
 
-h2
+h2, .h2
     font-size: 2rem
 
-
+    font-weight: 300;
     font-style: normal;
     letter-spacing: 0em;
     text-align: left;
     line-height: 100%;
     margin-bottom: 2rem
+    margin-top: 2rem
+
 
     @media screen and ( min-width: $lg )
-        margin-top: 2rem
-        margin-bottom: 4rem
+        margin-bottom: 1.6rem
         font-size: 48px;
-        font-style: normal;
-        font-weight: 300;
+        
         line-height: 56px;
         letter-spacing: 0em;
         text-align: left;
@@ -230,11 +239,14 @@ h2
 
 .h3
     @media screen and ( min-width: $md )
-        font-size: 18px;
-        line-height: 23px;
+        font-size: 36px;
+        line-height: 42px;
+    
+    font-size: 1.7rem
 
+    font-weight: 300;
+    margin-bottom: 2rem
     font-style: normal;
-    font-weight: 600;
     letter-spacing: 0em;
 
 
@@ -316,7 +328,7 @@ img
     &-title
         font-size: 18px;
         font-style: normal;
-        font-weight: 600;
+        font-weight: 400;
         line-height: 23px;
         letter-spacing: 0em;
         text-align: left;
@@ -425,6 +437,9 @@ picture
     .modal-body
         color: $grey
 
+    p.plain-text
+        line-height: 25px
+
     .plain-text
         color: $grey
 
@@ -478,6 +493,12 @@ picture
 @media screen and ( min-width: $lg )
     .w-lg-65
         max-width: 65%
+.g-45
+    --bs-gutter-y: 70px;
+    --bs-gutter-x: 40px;
+
+.gap-45
+    gap: 70px 40px
 
 .hstack
   &-sm
@@ -1009,6 +1030,7 @@ header.white
     color: $light
     padding: 23px 46px
     display: flex
+    align-items: center
     gap: 1rem
     transition: .3s
     animation: cons  1.5s infinite ease-in-out;
@@ -1288,3 +1310,33 @@ nav.breadcrumbs
         &__info
             color: $grey
             font-size: 14px
+    
+.small-banner
+    padding-top: 4.2rem
+    padding-bottom: 4.2rem
+    background: $light
+
+    @media screen and ( max-width: $m-md )
+        padding-top: 3rem
+        padding-bottom: 3rem
+
+        
+    &__text
+        max-width: 400px
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 29px;
+        letter-spacing: 0em;
+        text-align: left;
+        @media screen and ( max-width: $m-md )
+            font-size: 1.3rem
+            line-height: 125%
+
+.anothers
+    margin-top: 45px
+    @media screen and ( min-width: $md )
+        margin-top: 85px
+    .h2
+        @media screen and ( min-width: $md )
+           margin-bottom: 82px
