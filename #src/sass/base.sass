@@ -27,10 +27,16 @@ $light-grey: #E5E5E5;
 $light-back: #F2F2F2
 $grey: #828282;
 $coming-soon: #F6F6F6
+$blue: #2F80ED
 
 /*Общие стили*/  
 html body .grey
     color: $grey !important
+
+.blue
+    color: $blue
+
+
 .fw-bolder
     font-family: 'Futura New';
 
@@ -86,10 +92,14 @@ a:hover
 .plain-text
     font-size: 18px;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 21px;
     letter-spacing: 0em;
     text-align: left;
+
+    p
+        line-height: 25px
+
 
 p
     margin-bottom: 1.5rem
@@ -108,14 +118,18 @@ p
 .big-text
     font-size: 24px;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 28px;
     letter-spacing: 0em;
     text-align: left;
 
 .medium-text
-    font-size: 18px
-    line-height: 125%
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
 
 .small-text
     font-size: 16px;
@@ -496,9 +510,19 @@ picture
 .g-45
     --bs-gutter-y: 70px;
     --bs-gutter-x: 40px;
+    @media screen and ( max-width: $md )
+        --bs-gutter-y: 30px;
+        --bs-gutter-x: 20px;
 
 .gap-45
     gap: 70px 40px
+
+.g-43
+    --bs-gutter-y: 37px;
+    --bs-gutter-x: 40px;
+
+.gap-43 
+    gap: 70px 37px
 
 .hstack
   &-sm
@@ -783,7 +807,6 @@ footer
         line-height: 18px;
         letter-spacing: 0em;
         text-align: left;
-        text-decoration: underline !important
     
     .logo
         &-text
@@ -800,7 +823,7 @@ footer
     .logo
         @media screen and ( max-width: $xxl )
             max-width: 150px
-        align-items: baseline
+        align-items: end
         &-text
             font-size: 14px;
             line-height: 17px;
@@ -1001,12 +1024,17 @@ header.white
                 line-height: 22px;
                 letter-spacing: 0em;
                 text-align: left;
-
+.place-items-center
+    place-items: center
 .def-combo
     display: flex
     gap: 1rem 3rem
-    align-items: center
+    // align-items: center
     width: fit-content
+    &__thd-link
+        margin-top: 46px
+        align-self: center
+        width: fit-content
     @media screen and ( max-width: $lg )
         flex-wrap: wrap
     @media screen and ( max-width: $md )
@@ -1081,7 +1109,8 @@ nav.breadcrumbs
 
 .phone-info
     display: flex
-    gap: 3px
+    gap: 
+    padding: 7px 0
     flex-direction: column
 
     &__number
@@ -1295,13 +1324,11 @@ nav.breadcrumbs
 
         &__links
             &-mail a
-                text-decoration: underline !important
 
             &-wa a
                 font-family: 'Futura New'
 
                 color: $red
-                text-decoration: underline
 
                 @media screen and ( max-width: $lg )
                     font-size: 14px
@@ -1332,6 +1359,22 @@ nav.breadcrumbs
         @media screen and ( max-width: $m-md )
             font-size: 1.3rem
             line-height: 125%
+
+    &--project
+        .small-banner__text
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+            letter-spacing: 0em;
+            
+        padding-top: 4rem
+        padding-bottom: 3.6rem
+                    
+        @media screen and ( max-width: $m-md )
+            padding-top: 3rem
+            padding-bottom: 3rem
+
 
 .anothers
     margin-top: 45px

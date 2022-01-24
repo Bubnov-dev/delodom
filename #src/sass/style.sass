@@ -220,6 +220,18 @@
 
         &-gallery
             margin-bottom: 57px
+            .row
+            
+                --bs-gutter-x: 20px
+                --bs-gutter-y: 20px
+                a
+                    display: block
+                    height: 100%
+                    *
+                        height: 100%
+
+                img
+                    object-fit: cover
 
     &__block
         margin-bottom: 70px
@@ -229,10 +241,20 @@
 
 
 .project
+    .house__top
+        margin-top: 62px 
+
     &__title
         display: flex
         justify-content: space-between
-        align-items: start
+        align-items: center
+        @media screen and ( max-width: $lg )
+            align-items: start
+
+            flex-direction: column
+            margin-bottom: 20px
+            .line
+                display: none
 
     &__base-price
         display: flex
@@ -257,14 +279,18 @@
             letter-spacing: 0em;
             max-width: 178px
 
+
+
     &__specifications
         flex-direction: row
         flex-wrap: nowrap   
 
     &__properties
         flex-direction: row
-        gap: 41px
+        gap: 20px 41px
         margin-bottom: 37px
+        @media screen and ( max-width: $lg )
+            flex-wrap: wrap
 
     &__main-photos
         a img
@@ -279,6 +305,15 @@
         .project__block-title
             width: 200px
             
+    .plan
+        margin-bottom: 110px
+        @media screen and ( max-width: $md )
+            margin-bottom: 50px
+            
+        .row
+            --bs-gutter-x: 143px
+            --bs-gutter-y: 35px
+
 
     &__block-title
         font-size: 24px;
@@ -290,14 +325,45 @@
 
     
     &__sub-info
+        position: relative
         max-width: 444px
         margin-top: 76px
         display: flex
         flex-direction: column
         gap: 31px
 
+        .big-text
+            margin-bottom: 0
+
+        &::before
+            content: url('../img/confirmation.svg')
+            position: absolute
+            left: -155px
+            top: -134px
+            z-index: -1
         @media screen and ( max-width: $m-md )
             gap: 20px
+
+    &__price
+        padding: 1px 48px 40px
+        background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='white' stroke='%23E0E0E0FF' stroke-width='4' stroke-dasharray='9%2c 10' stroke-dashoffset='3' stroke-linecap='square'/%3e%3c/svg%3e");
+        margin-bottom: 80px
+        .project__block-title
+            margin-top: -.5rem
+            background: white
+            padding: 0 15px
+            width: fit-content
+        .red-price
+            margin-top: 19px
+            margin-bottom: 6px
+        &-desc
+            max-width: 440px
+            margin-top: 26px
+            display: flex
+            flex-direction: column
+            gap: 21px
+
+
 
 .red-price
     font-size: 24px;
@@ -306,5 +372,88 @@
     line-height: 29px;
     text-align: left;
     color: $red
+    white-space: nowrap
+
+.list-complect
+    margin-top: 105px
+    margin-bottom: 25px
+    .h2
+        margin-bottom: 96px
+    .row
+        --bs-gutter-y: 100px;
+        --bs-gutter-x: 50px;
+        @media screen and ( max-width: $m-md )
+            --bs-gutter-y: 40px;
+    &__item
+        display: flex
+        gap: 52px
+        &-desc
+            .h3
+                margin-bottom: 28px
+        &-text
+            display: flex
+            flex-direction: column
+            gap: 1rem
 
 
+.like-banner
+    margin-top: 91px
+    color: white
+    background: $dark
+    // max-height: 95vh
+    .plain-text
+        max-width: 560px
+        box-sizing: content-box
+    a
+        color: white
+
+    .h3
+        margin-top: 98px
+
+    .def-combo
+        margin-top: 48px
+        margin-bottom: 119px
+
+    .container
+        padding-top: 1px
+        padding-bottom: 1px
+        position: relative
+        height: 100%
+        &>*
+            position: relative
+            z-index: 10
+
+    &__back
+        width: fit-content
+        top: 0
+        right: 0
+        height: 100%
+        position: absolute !important
+        z-index: 0 !important
+        padding: 0 !important
+
+        picture
+            place-items: end
+            img
+                max-width: unset
+        * 
+            height: 100%
+
+.nav-tabs
+    border: none
+    gap: 20px
+    .nav-item button
+        border-radius: 2px;
+        color: $dark
+        border: none
+        padding: 3px 13px 5px
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: left;
+
+        &.active
+            background: $dark
+            color: white

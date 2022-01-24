@@ -186,6 +186,10 @@ html body .grey {
   color: #828282 !important;
 }
 
+.blue {
+  color: #2F80ED;
+}
+
 .fw-bolder {
   font-family: 'Futura New';
 }
@@ -266,10 +270,14 @@ a:hover {
 .plain-text {
   font-size: 18px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 21px;
   letter-spacing: 0em;
   text-align: left;
+}
+
+.plain-text p {
+  line-height: 25px;
 }
 
 p {
@@ -292,15 +300,19 @@ p.plain-text {
 .big-text {
   font-size: 24px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 28px;
   letter-spacing: 0em;
   text-align: left;
 }
 
 .medium-text {
-  font-size: 18px;
-  line-height: 125%;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 .small-text {
@@ -726,6 +738,15 @@ picture > * {
   gap: 70px 40px;
 }
 
+.g-43 {
+  --bs-gutter-y: 37px;
+  --bs-gutter-x: 40px;
+}
+
+.gap-43 {
+  gap: 70px 37px;
+}
+
 .gap-0 {
   gap: 0 !important;
 }
@@ -833,7 +854,6 @@ footer .conf-a {
   line-height: 18px;
   letter-spacing: 0em;
   text-align: left;
-  text-decoration: underline !important;
 }
 
 footer .logo-text {
@@ -856,9 +876,9 @@ footer .logo picture {
 }
 
 .header-navbar .logo {
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
 }
 
 .header-navbar .logo-text {
@@ -1129,14 +1149,24 @@ header.white .my-dropdown-menu a {
   text-align: left;
 }
 
+.place-items-center {
+  place-items: center;
+}
+
 .def-combo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 1rem 3rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.def-combo__thd-link {
+  margin-top: 46px;
+  -ms-flex-item-align: center;
+      align-self: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1252,7 +1282,7 @@ nav.breadcrumbs::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 3px;
+  padding: 7px 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1466,14 +1496,9 @@ nav.breadcrumbs::before {
   text-align: left;
 }
 
-.footer-footer__links-mail a {
-  text-decoration: underline !important;
-}
-
 .footer-footer__links-wa a {
   font-family: 'Futura New';
   color: #DA5C3E;
-  text-decoration: underline;
 }
 
 .footer-footer__info {
@@ -1495,6 +1520,19 @@ nav.breadcrumbs::before {
   line-height: 29px;
   letter-spacing: 0em;
   text-align: left;
+}
+
+.small-banner--project {
+  padding-top: 4rem;
+  padding-bottom: 3.6rem;
+}
+
+.small-banner--project .small-banner__text {
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
 }
 
 .anothers {
@@ -1880,6 +1918,11 @@ nav.breadcrumbs::before {
 }
 
 @media screen and (max-width: 768px) {
+  .g-45 {
+    --bs-gutter-y: 30px;
+    --bs-gutter-x: 20px;
+  }
+
   .def-combo {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1951,6 +1994,11 @@ nav.breadcrumbs::before {
   .small-banner__text {
     font-size: 1.3rem;
     line-height: 125%;
+  }
+
+  .small-banner--project {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 }
 @supports (-webkit-appearance:none){
