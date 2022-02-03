@@ -23,6 +23,13 @@
         display: flex
 
         gap: 20px
+.header-navbar
+    .logo
+        color: white
+
+    &.dark
+        .logo
+            color: $dark
 
 .header-navbar__list
     display: flex
@@ -92,7 +99,7 @@
         font-size: 24px;
         font-weight: 400;
         line-height: 29px;
-        margin-bottom: 1.8rem
+        margin-bottom: 2rem
 
     .card-body
         padding-top: 0
@@ -199,6 +206,11 @@
     margin-top: 70px
 
 .house
+    margin-bottom: 96px
+
+    @media screen and ( max-width: $lg )
+        margin-bottom: 50px
+        
 
     p
         max-width: 960px
@@ -405,7 +417,7 @@
         max-width: 560px
         box-sizing: content-box
     a
-        color: white
+        color: $yellow
 
     .h3
         margin-top: 98px
@@ -453,7 +465,344 @@
         line-height: 19px;
         letter-spacing: 0em;
         text-align: left;
+        text-decoration: underline
 
         &.active
+            text-decoration: none
             background: $dark
             color: white
+
+.info-item
+    display: grid
+    grid-template-columns: 100% 100%
+    text-decoration: none
+
+
+    &-list
+        --bs-gutter-y: 40px;
+        --bs-gutter-x: 40px;
+        @media screen and ( max-width: $lg )
+            --bs-gutter-x: 2rem;
+            --bs-gutter-y: 2rem;
+            
+
+    &>*
+        grid-column: 1/2
+        grid-row: 1/2
+    &__title
+        padding: 0 3rem 
+        position: relative
+        z-index: 100
+        text-decoration: none
+        grid-column: 1/2
+        grid-row: 1/2
+        font-family: 'Futura New'
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 56px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: white
+        align-self: center
+        @media screen and ( max-width: $lg )
+            font-size: 40px
+            line-height: 110%
+
+
+
+    img
+        width: 100%
+
+    &::before
+        content: ""
+
+        width: 100%
+        height: 100%
+        background:  $red
+        opacity: 0
+        transition: .3s
+        grid-column: 1/2
+        grid-row: 1/2
+    &:hover
+        &::before
+            opacity: 0.9
+
+
+.contacts
+    .h3
+        max-width: 620px
+    p, .plain-text
+        max-width: 758px
+
+    .right-menu
+        gap: 20px
+
+    .base-info
+        margin-top: 79px
+        gap: 22px
+        position: relative
+
+        &__alert
+            max-width: 440px
+
+        &::before
+            content: url(../img/place.svg)
+            width: 414px
+            position: absolute
+            z-index: -1
+            top: -331px
+            left: -240px
+            
+
+        .property 
+            *
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 22px;
+                letter-spacing: 0em;
+
+.accordion-button   
+    padding: 0 33px !important
+    margin: 0 -33px
+    &::after
+        margin-left: 15px
+        margin-right: 15px
+        background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2217%22%20height%3D%2211%22%20viewBox%3D%220%200%2017%2011%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M8.49995%200.654736C8.19528%200.654736%207.89064%200.771067%207.65836%201.00324L0.34874%208.31293C-0.116247%208.77792%20-0.116247%209.53182%200.34874%209.99662C0.813539%2010.4614%201.56729%2010.4614%202.03231%209.99662L8.49995%203.52859L14.9676%209.99639C15.4326%2010.4612%2016.1863%2010.4612%2016.6511%209.99639C17.1163%209.53159%2017.1163%208.77769%2016.6511%208.31271L9.34155%201.00301C9.10915%200.770803%208.80451%200.654736%208.49995%200.654736Z%22%20fill%3D%22%23DA5C3E%22%2F%3E%0A%3C%2Fsvg%3E%0A") !important
+
+
+.accordion-button , .accordion-button:not(.collapsed)
+    background: white
+    border-bottom: 0
+    box-shadow: none !important
+    width: fit-content;
+    position: relative;
+    margin-top: -1rem;
+    height: fit-content;
+    padding: 0px;
+    line-height: 1rem
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $red
+
+.accordion-body
+    padding: 32px 0
+    *
+        line-height: 25px    
+    .big-text
+        margin-top: 32px
+
+.accordion-header
+    margin-top: 0
+
+.accordion-item
+    margin: 59px 0 43px
+    padding: 1px 100px 43px
+
+.accordion-item
+    border: 1px solid black !important
+    border-radius: 0px
+
+.red-border
+    border-color: $red !important
+
+
+.ugly-banner
+    width: 100%
+
+
+.about
+    &__main-info
+
+        .h2
+            max-width: 888px
+            box-sizing: content-box
+            margin-bottom: 47px
+        .row
+            --bs-gutter-y: 60px;
+            --bs-gutter-x: 140px;
+
+            position: relative
+
+            
+            .back-photo
+                position: absolute
+                bottom: -100px
+                right: -415px
+                width: fit-content
+                z-index: -1
+
+                *
+                    width: fit-content
+    
+    &__contract
+        margin-top: 87px
+        margin-bottom: 74px
+        .and-else
+            max-width: 558px
+            margin-top: 68px
+        &-list
+            margin-top: 38px
+            display: flex
+            flex-direction: column
+            gap: 55px
+
+            @media screen and ( min-width: $md )
+                padding-left: 18px                
+
+        &-item
+            display: flex
+            gap: 58px
+            &-num
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 42px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: $grey
+
+            &-content
+                max-width: 560px
+            &-title
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 29px;
+                letter-spacing: 0em;
+                text-align: left;
+                margin-bottom: 13px
+
+        .image-place
+            padding-top: 20px
+            position: relative
+            .img-wrapper
+                position: absolute
+                height: 100%
+                *
+                    height: 100%
+                    max-width: unset
+                    width: auto
+
+    &__man-block
+        margin-top: 123px
+        margin-bottom: 123px
+        @media screen and ( max-width: $m-md )
+            margin-bottom: 50px
+        &-text
+            position: relative
+            .quot
+                position: absolute
+                z-index: -1
+                top: -80px
+                left: 113px
+                color: $light-grey
+                content: '"'
+                font-size: 288px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 25px;
+                letter-spacing: 0em;
+                text-align: left;
+                display: flex
+                *
+                    display: inline-block;
+                    transform: rotateZ(200deg);
+                    margin-left: -10px;
+
+        &-desc
+            margin-top: 48px
+        &.row
+            --bs-gutter-x: 140px
+
+    &__built-for-key
+        background: $light-back
+        padding: 86px 0 102px
+
+        .row
+            --bs-gutter-x: 40px
+            --bs-gutter-y: 60px
+            
+        .h2
+            margin-top: 0
+            margin-bottom: 47px
+
+        &-item
+            &-title
+                margin-top: 22px
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 28px;
+                letter-spacing: 0em;
+                text-align: left;
+
+.blog-block
+    .h2
+        margin-top: 81px
+        margin-bottom: 74px
+    &__article
+        &-short-info  
+            margin-top: 28px         
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 19px;
+            letter-spacing: 0em;
+            text-align: left;
+
+        &-title
+            margin-top: 10px
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 29px;
+            letter-spacing: 0em;
+            text-align: left;
+            max-width: 458px
+
+        &-more
+            margin-top: 33px
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0em;
+            text-align: left;
+
+            align-items: center
+
+.choose-prof
+    max-width: 426px
+
+.benefits-list
+    margin-top: 55px
+    .h2
+        box-sizing: content-box
+        max-width: 888px
+    &__content
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap:  96px 140px
+        margin-top: 93px
+        @media screen and ( max-width: $m-md )
+            grid-template-columns: 100%
+
+    &__item
+        display: flex
+        gap: 40px
+        &-text
+            max-width: 360px
+
+        &::before
+            content: url('data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2260%22%20height%3D%221%22%20viewBox%3D%220%200%2060%201%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cline%20y1%3D%220.5%22%20x2%3D%2260%22%20y2%3D%220.5%22%20stroke%3D%22%23DA5C3E%22%2F%3E%0A%3C%2Fsvg%3E%0A');
+            
+    .will-count
+        box-sizing: content-box
+
+        max-width: 660px
+        margin-top: 94px

@@ -437,6 +437,7 @@ h2,
   margin-top: 2rem;
 }
 
+h3,
 .h3 {
   font-size: 1.7rem;
   font-weight: 300;
@@ -1102,7 +1103,6 @@ header.white .my-dropdown-menu a {
   color: white;
   padding-top: 91px;
   padding-bottom: 106px;
-  max-width: 850px;
 }
 
 .banner__subtitle {
@@ -1114,6 +1114,17 @@ header.white .my-dropdown-menu a {
   letter-spacing: 0em;
   text-align: left;
   color: #F4E9BF;
+}
+
+.banner__subtitle--big {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 42px;
+  letter-spacing: 0em;
+  text-align: left;
+  max-width: 715px;
+  margin-bottom: 82px;
 }
 
 .banner-list {
@@ -1157,7 +1168,7 @@ header.white .my-dropdown-menu a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem 3rem;
+  gap: 1rem 4rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1247,10 +1258,13 @@ header.white .my-dropdown-menu a {
 }
 
 .banner-wrapper {
-  background-image: url(../img/banner-back.png);
   background-repeat: none;
   background-size: cover;
   margin-bottom: 80px;
+}
+
+.banner-wrapper--about {
+  background-image: url(../img/about-banner.png);
 }
 
 nav.breadcrumbs::before {
@@ -1282,6 +1296,7 @@ nav.breadcrumbs::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 5px;
   padding: 7px 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1539,6 +1554,26 @@ nav.breadcrumbs::before {
   margin-top: 45px;
 }
 
+.show-more-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15px;
+  padding: 25px;
+  background: #333333;
+  color: white;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  border-radius: 5px;
+}
+
 @media screen and (min-width: 576px) {
   .hstack-sm {
     display: -webkit-box;
@@ -1602,6 +1637,7 @@ nav.breadcrumbs::before {
 }
 
 @media screen and (min-width: 768px) {
+  h3,
   .h3 {
     font-size: 36px;
     line-height: 42px;
@@ -2002,7 +2038,7 @@ nav.breadcrumbs::before {
   }
 }
 @supports (-webkit-appearance:none){
-.banner-wrapper{background-image:url(../img/banner-back.webp)}
+.banner-wrapper--about{background-image:url(../img/about-banner.webp)}
 }
 
  @media screen and (min-width: 576px){
