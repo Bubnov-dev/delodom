@@ -2371,6 +2371,10 @@ nav.breadcrumbs::before {
   width: 100%;
 }
 
+.about__main-info p:last-child {
+  margin-bottom: 0;
+}
+
 .about__main-info .h2 {
   max-width: 888px;
   -webkit-box-sizing: content-box;
@@ -2471,15 +2475,21 @@ nav.breadcrumbs::before {
 
 .about .about__man-block {
   margin-bottom: 123px;
+  margin-top: 123px;
 }
 
 .about__man-block {
-  margin-top: 123px;
+  margin-top: 90px;
   margin-bottom: 15px;
 }
 
 .about__man-block-text {
   position: relative;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 .about__man-block-text .quot {
@@ -2582,16 +2592,30 @@ nav.breadcrumbs::before {
 
 .choose-prof {
   max-width: 426px;
+  margin-bottom: 0;
 }
 
 .benefits-list {
-  margin-top: 55px;
+  margin-top: 85px;
 }
 
 .benefits-list .h2 {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   max-width: 888px;
+}
+
+.benefits-list__subtitle {
+  margin-top: 46px;
+  max-width: 926px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 .benefits-list__content {
@@ -2617,10 +2641,17 @@ nav.breadcrumbs::before {
 }
 
 .benefits-list .will-count {
+  margin-top: 94px;
+}
+
+.will-count {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   max-width: 660px;
-  margin-top: 94px;
+}
+
+.works-price {
+  margin-bottom: 100px;
 }
 
 .works-price .plain-text {
@@ -2681,11 +2712,12 @@ nav.breadcrumbs::before {
 }
 
 .middle-niche {
-  margin-top: 100px;
+  margin-bottom: 66px;
 }
 
 .middle-niche .h2 {
   margin-bottom: 40px;
+  margin-top: 0;
 }
 
 .middle-niche__subtitle {
@@ -2934,6 +2966,190 @@ nav.breadcrumbs::before {
           box-sizing: content-box;
 }
 
+.ready-catalog {
+  margin-top: 89px;
+}
+
+.ready-catalog .h1 {
+  margin-bottom: 52px;
+}
+
+.ready-catalog__image {
+  position: relative;
+}
+
+.ready-catalog__image:hover::before {
+  opacity: 1;
+}
+
+.ready-catalog__image::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(218, 92, 62, 0.9);
+  display: grid;
+  place-items: center;
+  content: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2233%22%20height%3D%2257%22%20viewBox%3D%220%200%2033%2057%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M32.7455%2028.5002C32.7455%2029.5217%2032.3555%2030.5431%2031.577%2031.322L7.06803%2055.8307C5.50896%2057.3898%202.98118%2057.3898%201.42274%2055.8307C-0.135705%2054.2723%20-0.135705%2051.745%201.42274%2050.1858L23.1096%2028.5002L1.4235%206.81441C-0.134947%205.25533%20-0.134947%202.72832%201.4235%201.17C2.98194%20-0.389828%205.50971%20-0.389828%207.06879%201.17L31.5778%2025.6783C32.3563%2026.4576%2032.7455%2027.479%2032.7455%2028.5002Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+}
+
+.ready-catalog__title {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #DA5C3E;
+  margin-top: 34px;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 21px;
+}
+
+.ready-catalog__title:hover {
+  text-decoration: underline;
+}
+
+.else-build {
+  margin-top: 72px;
+}
+
+.else-build__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 45px;
+  margin-bottom: 36px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.else-build__text {
+  font-size: 24px;
+  font-style: normal;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  max-width: 760px;
+  margin-bottom: 66px;
+}
+
+.designing {
+  margin-bottom: 115px;
+}
+
+.designing .h2 {
+  margin-top: 0;
+  margin-bottom: 92px;
+  max-width: 860px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.designing .row {
+  --bs-gutter-y: 88px;
+  --bs-gutter-x: 94px;
+}
+
+.designing__short {
+  width: 39px;
+  height: 52px;
+  background: #333333;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+.designing__title {
+  margin-top: 32px;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 56px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.designing__look-example {
+  margin-left: 9px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+.designing__ul {
+  margin-top: 41px;
+  margin-bottom: 71px;
+  list-style: none;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+.designing__ul li {
+  display: grid;
+  grid-template-columns: 1fr 20fr;
+  gap: 14px;
+}
+
+.designing__ul li::before {
+  content: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2234%22%20height%3D%221%22%20viewBox%3D%220%200%2034%201%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cline%20y1%3D%220.5%22%20x2%3D%2234%22%20y2%3D%220.5%22%20stroke%3D%22%23C4C4C4%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+  height: 1px;
+  display: grid;
+  margin-top: .7rem;
+}
+
+.designing__combo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px 58px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.designing__combo-price {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.designing__footer {
+  margin-top: 50px;
+  max-width: 357px;
+}
+
 @media screen and (min-width: 576px) {
   .hstack-sm {
     display: -webkit-box;
@@ -3085,6 +3301,10 @@ nav.breadcrumbs::before {
 
   .middle-niche__snd-col {
     padding-left: 140px;
+  }
+
+  .else-build__content {
+    padding-left: 95px;
   }
 }
 
