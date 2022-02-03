@@ -182,6 +182,10 @@
 
 /*Общие стили*/
 
+.hidden {
+  display: none;
+}
+
 html body .grey {
   color: #828282 !important;
 }
@@ -292,7 +296,7 @@ p.plain-text {
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: 29px;
+  line-height: 25px;
   letter-spacing: 0em;
   text-align: left;
 }
@@ -1105,6 +1109,10 @@ header.white .my-dropdown-menu a {
   padding-bottom: 106px;
 }
 
+.banner .h1 {
+  max-width: 900px;
+}
+
 .banner__subtitle {
   font-family: 'Futura New';
   font-size: 24px;
@@ -1113,6 +1121,7 @@ header.white .my-dropdown-menu a {
   line-height: 29px;
   letter-spacing: 0em;
   text-align: left;
+  max-width: 743px;
   color: #F4E9BF;
 }
 
@@ -1130,8 +1139,8 @@ header.white .my-dropdown-menu a {
 .banner-list {
   display: grid;
   grid-template-columns: 100%;
-  gap: 52px;
-  margin-top: 3rem;
+  gap: 39px;
+  margin-top: 3.4rem;
   margin-bottom: 70px;
   max-width: 525px;
 }
@@ -1139,11 +1148,12 @@ header.white .my-dropdown-menu a {
 .banner-list__item {
   display: grid;
   grid-template-columns: 1fr 10fr;
-  gap: 40px;
+  gap: 46px;
+  margin-left: -37px;
 }
 
 .banner-list__item::before {
-  content: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2261%22%20height%3D%228%22%20viewBox%3D%220%200%2061%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M60.3536%204.35355C60.5488%204.15829%2060.5488%203.84171%2060.3536%203.64645L57.1716%200.464466C56.9763%200.269204%2056.6597%200.269204%2056.4645%200.464466C56.2692%200.659728%2056.2692%200.976311%2056.4645%201.17157L59.2929%204L56.4645%206.82843C56.2692%207.02369%2056.2692%207.34027%2056.4645%207.53553C56.6597%207.7308%2056.9763%207.7308%2057.1716%207.53553L60.3536%204.35355ZM0%204.5H60V3.5H0V4.5Z%22%20fill%3D%22%23BDBDBD%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+  content: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2269%22%20height%3D%221%22%20viewBox%3D%220%200%2069%201%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cline%20y1%3D%220.5%22%20x2%3D%2269%22%20y2%3D%220.5%22%20stroke%3D%22%23BCBCBC%22%2F%3E%0A%3C%2Fsvg%3E%0A");
   position: relative;
 }
 
@@ -1158,6 +1168,20 @@ header.white .my-dropdown-menu a {
   line-height: 22px;
   letter-spacing: 0em;
   text-align: left;
+}
+
+.banner-wrapper--foundation {
+  background-image: url(../img/foundation.png);
+}
+
+.banner-wrapper--snd {
+  background-repeat: none;
+  background-size: cover;
+  margin-bottom: 103px !important;
+}
+
+.banner-wrapper--snd .banner {
+  padding-bottom: 126px;
 }
 
 .place-items-center {
@@ -2038,6 +2062,7 @@ nav.breadcrumbs::before {
   }
 }
 @supports (-webkit-appearance:none){
+.banner-wrapper--foundation{background-image:url(../img/foundation.webp)}
 .banner-wrapper--about{background-image:url(../img/about-banner.webp)}
 }
 

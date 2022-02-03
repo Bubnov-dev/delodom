@@ -688,9 +688,13 @@
                     max-width: unset
                     width: auto
 
+    .about__man-block
+        margin-bottom: 123px
+
     &__man-block
         margin-top: 123px
-        margin-bottom: 123px
+        margin-bottom: 15px
+
         @media screen and ( max-width: $m-md )
             margin-bottom: 50px
         &-text
@@ -806,3 +810,278 @@
 
         max-width: 660px
         margin-top: 94px
+
+.works-price
+    .plain-text
+        box-sizing: content-box
+
+        max-width: 960px
+
+    &__separate-price
+        max-width: 516px
+        margin: 48px 0 63px
+        box-sizing: content-box
+
+    .row
+        --bs-gutter-y: 60px;
+        --bs-gutter-x: 40px;
+
+
+    &__title
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0em;
+        text-align: left;
+
+        margin: 40px 0 13px
+
+
+    &__price
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-bottom: 19px
+
+    a.red
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+
+
+    &__ask-question
+        margin-top: 17px
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: left;
+
+
+.middle-niche
+    margin-top: 100px
+    .h2
+        margin-bottom: 40px
+    &__subtitle
+        margin-bottom: 82px
+
+    .abs-pic
+        position: absolute
+        right: 0
+        height: 100%
+        width: auto
+        img
+            max-width: unset
+
+    &__list
+        padding-top: 46px
+        padding-bottom: 80px
+
+        @media screen and ( max-width: $m-md )
+                
+            padding-top: 0px
+            padding-bottom: 0px           
+
+        .vstack
+            font-size: 21px;
+            font-style: normal;
+            line-height: 25px;
+            letter-spacing: 0em;
+            text-align: left;
+
+    &__big-text
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 43px;
+        letter-spacing: 0em;
+        text-align: left;
+
+
+
+    .row 
+        --bs-gutter-y: 88px;
+
+        &>*
+            position: relative
+    .line
+        position: absolute
+        left: -80px
+        z-index: 20
+
+    &__snd-col
+        @media screen and ( min-width: $md )
+            padding-left: 140px
+            
+    &__video
+        display: flex
+        flex-direction: column
+        justify-content:  center
+        .red
+            margin-top: 22px
+            max-width: 358px
+            box-sizing: content-box
+
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 29px;
+            letter-spacing: 0em;
+            text-align: left;
+
+
+.works-by-key
+    margin-top: 106px
+    margin-bottom: 80px
+    .h2
+        margin-bottom: 60px
+    .row
+        --bs-gutter-y: 40px;
+
+    &__title
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-top: 33px
+        margin-bottom: 24px
+
+    &__price
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+
+.mistakes
+    margin-top: 80px
+    &__subtitle
+        margin: 46px 0 77px
+        max-width: 680px
+        box-sizing: content-box
+    &__img-wrapper
+        position: relative
+    &__item
+
+    &__number
+        font-size: 96px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 115px;
+        letter-spacing: 0em;
+        text-align: left;
+
+        color: $red
+
+        position: absolute
+        bottom: -60px
+        left: 101px
+
+    &__title
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 29px;
+        letter-spacing: 0em;
+        text-align: left;
+
+        margin-top: 66px
+        margin-bottom: 22px
+        max-width: 460px
+
+    &__desc
+        font-size: 16px;
+        font-style: normal;
+        line-height: 25px;
+        letter-spacing: 0em;
+        text-align: left;
+
+
+.process-list
+    margin-top: 91px
+    margin-bottom: 111px;
+    .h2
+        margin-bottom: 74px
+
+    &__content
+        display: flex
+        flex-direction: column
+        gap: 10px
+    &__item
+        display: grid
+        gap: 10px 93px
+        grid-template-columns: 1fr 20fr
+        @media screen and ( max-width: $m-sm )
+            gap: 10px 30px
+        &:last-child
+            .process-list__line
+                display: none
+            .process-list__text
+
+                padding-bottom: 0
+    
+    &__num
+        grid-column: 1/2
+        grid-row: 1/2
+        width: 58px
+        height: 58px
+        background: $red
+        border-radius: 50%
+        color: white
+        display: grid
+        place-items: center
+        align-self: center
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0em;
+        text-align: center;
+
+    &__title
+        grid-column: 2/3
+        grid-row: 1/2
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 29px;
+        letter-spacing: 0em;
+        text-align: left;
+
+        align-self: center
+
+    &__line
+        
+        grid-column: 1/2
+        grid-row: 2/3
+        width: 1px
+        height: 100%
+        background: $red
+        place-self: center
+
+    &__text 
+        
+        grid-column: 2/3
+        grid-row: 2/3
+        padding-bottom: 42px
+        font-size: 16px;
+        font-style: normal;
+        line-height: 25px;
+        letter-spacing: 0em;
+        text-align: left;
+        max-width: 760px
+        box-sizing: content-box
+        
+            
+

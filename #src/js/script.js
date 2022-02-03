@@ -13,4 +13,13 @@ $(document).ready(function () {
         }
 
     })
+
+
+
+    /* foundation.html */
+
+    $('.mistake-show').on('click', function(){
+        $(this).remove()
+        $('.mistakes__item').removeClass('hidden')
+    })
 })
