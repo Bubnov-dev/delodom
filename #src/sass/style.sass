@@ -421,10 +421,12 @@
 
     .h3
         margin-top: 98px
+        margin-bottom: 44px;
+
 
     .def-combo
         margin-top: 48px
-        margin-bottom: 119px
+        margin-bottom: 107px
 
     .container
         padding-top: 1px
@@ -632,10 +634,13 @@
             
             .back-photo
                 position: absolute
-                bottom: -100px
-                right: -415px
+                bottom: -180px
+                right: -475px
                 width: fit-content
                 z-index: -1
+
+                @media screen and ( max-width: $m-md )
+                    display: none
 
                 *
                     width: fit-content
@@ -758,6 +763,23 @@
         margin-top: 81px
         margin-bottom: 74px
     &__article
+        .img-wrapper
+            display: block
+            position: relative
+        .video-wrapper
+            display: none
+        &--video
+            .video-wrapper
+                display: grid
+                place-items: center
+                position: absolute
+                top: 0
+                bottom: 0
+                left: 0
+                right: 0
+                width: 100%
+                height: 100%
+
         &-short-info  
             margin-top: 28px         
             font-size: 16px;
@@ -791,6 +813,7 @@
 .choose-prof
     max-width: 426px
     margin-bottom: 0
+    margin-top: 24px
 
 .benefits-list
     margin-top: 85px
@@ -1175,6 +1198,12 @@
 
 .designing
     margin-bottom: 115px
+    
+    &__item
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        
     .h2
         margin-top: 0
         margin-bottom: 92px
@@ -1213,10 +1242,13 @@
         display: flex
         align-items: center
         gap: 15px
-    
-    &__ul
+
+    &__content
         margin-top: 41px
         margin-bottom: 71px
+
+    
+    &__ul
         list-style: none
         padding-left: 0
         display: flex

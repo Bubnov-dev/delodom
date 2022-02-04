@@ -2139,11 +2139,12 @@ nav.breadcrumbs::before {
 
 .like-banner .h3 {
   margin-top: 98px;
+  margin-bottom: 44px;
 }
 
 .like-banner .def-combo {
   margin-top: 48px;
-  margin-bottom: 119px;
+  margin-bottom: 107px;
 }
 
 .like-banner .container {
@@ -2390,8 +2391,8 @@ nav.breadcrumbs::before {
 
 .about__main-info .row .back-photo {
   position: absolute;
-  bottom: -100px;
-  right: -415px;
+  bottom: -180px;
+  right: -475px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -2556,6 +2557,27 @@ nav.breadcrumbs::before {
   margin-bottom: 74px;
 }
 
+.blog-block__article .img-wrapper {
+  display: block;
+  position: relative;
+}
+
+.blog-block__article .video-wrapper {
+  display: none;
+}
+
+.blog-block__article--video .video-wrapper {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .blog-block__article-short-info {
   margin-top: 28px;
   font-size: 16px;
@@ -2593,6 +2615,7 @@ nav.breadcrumbs::before {
 .choose-prof {
   max-width: 426px;
   margin-bottom: 0;
+  margin-top: 24px;
 }
 
 .benefits-list {
@@ -3053,6 +3076,19 @@ nav.breadcrumbs::before {
   margin-bottom: 115px;
 }
 
+.designing__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .designing .h2 {
   margin-top: 0;
   margin-bottom: 92px;
@@ -3100,9 +3136,12 @@ nav.breadcrumbs::before {
   gap: 15px;
 }
 
-.designing__ul {
+.designing__content {
   margin-top: 41px;
   margin-bottom: 71px;
+}
+
+.designing__ul {
   list-style: none;
   padding-left: 0;
   display: -webkit-box;
@@ -3715,6 +3754,10 @@ nav.breadcrumbs::before {
 
   .list-complect .row {
     --bs-gutter-y: 40px;
+  }
+
+  .about__main-info .row .back-photo {
+    display: none;
   }
 
   .about__man-block {
