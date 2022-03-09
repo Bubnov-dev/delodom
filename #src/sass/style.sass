@@ -1,5 +1,29 @@
 @import "base.sass"
+.btn-up
+    cursor: pointer
+    max-width: 50px
+    max-height: 50px
+    width: 50px
+    height: 50px
+    background: white
+    display: grid
+    place-items: center
+    box-shadow: 0 0 10px 10px rgba(135, 135, 135, 0.25);
+    border-radius: 50%
+    @media screen and ( max-width: $m-md )
+        height: 20vw
+        width: 20vw
 
+
+    opacity: 0
+    transition: .3s
+    position: fixed
+    z-index: 1000
+
+    bottom: 7vh
+    right: 7vw
+    &.vis
+        opacity: 1
 .header-top
 
     &__left
@@ -23,7 +47,67 @@
         display: flex
 
         gap: 20px
+@keyframes open 
+    from 
+        top: -100px
+    to 
+        top: 0
+@keyframes close 
+    from 
+        top: 0
+    to 
+        top: -100px
 .header-navbar
+    .logo img.fixed-for
+        display: none
+    &-wrapper
+        height: 95px
+@media screen and ( min-width: $md )
+
+    .header-navbar.fixed
+            
+        box-shadow: 4px 4px 4px 1px rgba(135, 135, 135, 0.25);
+        background: white
+        position: fixed
+        width: 100%;
+        z-index: 100;
+        padding: 7px 0
+        top: 0
+        
+        animation: open .3s ease-in-out;
+            
+
+        .logo
+            img
+                display: none
+                &.black
+                    display: block
+            
+        a
+            color: $dark
+            &.mactive
+                color: $red !important
+        .logo-text
+            display: none
+        &-vis
+            top: 0
+            
+            animation: open .3s ease-in-out;
+            
+
+        &-hid
+
+            // top: -100px !important
+            animation: close .3s ease-in-out;
+
+            
+
+
+    a
+        text-decoration: none
+        &:hover
+            text-decoration: underline
+        
     .logo
         color: white
 
@@ -131,7 +215,7 @@
     .card-title-wrapper
         display: flex
         justify-content: space-between
-        align-items: start
+        align-items: center
         max-width: 500px
     .more-btn
         &::after
@@ -162,7 +246,9 @@
     max-height: 90vh
     padding: 0;
     margin: 0;
-
+    .ymaps-2-1-79-balloon-content__header
+        margin-bottom: 0    
+        
     h3
         font-family: 'Futura New Book'
         font-size: 24px;
@@ -171,7 +257,7 @@
         line-height: 29px;
         letter-spacing: 0em;
         text-align: left;
-
+        margin-bottom: 0
 
     .ymaps-2-1-79-balloon__content
         font-family: 'Futura New Book' !important 
@@ -220,7 +306,7 @@
     &__top
         margin-top: 22px
         &-properties
-            margin-top: 5rem
+            margin-top: 3rem
             margin-bottom: 3rem
             padding-left: 60px
             border-left: 1px solid black
@@ -234,8 +320,13 @@
             margin-bottom: 57px
             .row
             
-                --bs-gutter-x: 20px
-                --bs-gutter-y: 20px
+                --bs-gutter-x: 38px
+                --bs-gutter-y: 38px
+
+                @media screen and ( max-width: $m-lg )
+                    
+                    --bs-gutter-x: 20px
+                    --bs-gutter-y: 20px
                 a
                     display: block
                     height: 100%
@@ -253,6 +344,8 @@
 
 
 .project
+
+
     .house__top
         margin-top: 62px 
 
@@ -316,6 +409,7 @@
 
         .project__block-title
             width: 200px
+            flex-shrink: 0
             
     .plan
         margin-bottom: 110px
@@ -375,6 +469,18 @@
             flex-direction: column
             gap: 21px
 
+        &+.def-combo
+            gap: 1rem 2.5rem
+            .phone-info
+                flex-shrink: 0
+            @media screen and ( max-width: 1100px )
+                flex-wrap: wrap
+                justify-content: start
+                .vstack
+                    place-items: start !important
+                    .def-combo__thd-link
+                        align-self: start
+
 
 
 .red-price
@@ -412,7 +518,10 @@
     margin-top: 91px
     color: white
     background: $dark
-    // max-height: 95vh
+    &--understand
+        .h3
+            max-width: 516px
+            box-sizing: content-box
     .plain-text
         max-width: 560px
         box-sizing: content-box
@@ -529,16 +638,21 @@
     &:hover
         &::before
             opacity: 0.9
+.right-menu
+    gap: 20px
+    a
+        text-decoration: none
+        &:hover
+            text-decoration: underline
 
+        &.active
+            color: $red
 
 .contacts
     .h3
         max-width: 620px
     p, .plain-text
         max-width: 758px
-
-    .right-menu
-        gap: 20px
 
     .base-info
         margin-top: 79px
@@ -688,9 +802,10 @@
             position: relative
             .img-wrapper
                 position: absolute
-                height: 100%
+                max-height: 100%
+                bottom: 0
                 *
-                    height: 100%
+                    max-height: 100%
                     max-width: unset
                     width: auto
 
@@ -859,6 +974,8 @@
 
 .works-price
     margin-bottom: 100px
+    img
+        cursor: pointer
     .plain-text
         box-sizing: content-box
 
@@ -922,19 +1039,24 @@
         margin-bottom: 82px
 
     .abs-pic
-        position: absolute
-        right: 0
-        height: 100%
-        width: auto
-        img
-            max-width: unset
+
+        @media screen and ( min-width: $md )
+            display: block
+                
+            position: absolute
+            right: 0
+            height: 100%
+            width: auto
+            img
+                max-width: unset
+                height: 100%
 
     &__list
         padding-top: 46px
         padding-bottom: 80px
 
         @media screen and ( max-width: $m-md )
-                
+            margin-top: 40px
             padding-top: 0px
             padding-bottom: 0px           
 
@@ -957,6 +1079,11 @@
 
     .row 
         --bs-gutter-y: 88px;
+
+        @media screen and ( max-width: $m-md )
+                
+            .col-md-6:first-child
+                margin-top: 40px
 
         &>*
             position: relative
@@ -1138,6 +1265,7 @@
     .h1
         margin-bottom: 52px
     &__image
+        display: block
         position: relative
         &:hover
             &::before
@@ -1182,6 +1310,9 @@
         gap: 45px
         margin-bottom: 36px
         align-items: center
+        @media screen and ( max-width: $m-sm)
+            flex-wrap: wrap
+            
     &__content
         @media screen and ( min-width: $md )
             padding-left: 95px
@@ -1203,12 +1334,13 @@
         display: flex
         flex-direction: column
         justify-content: space-between
-        
+
     .h2
         margin-top: 0
         margin-bottom: 92px
         max-width: 860px
         box-sizing: content-box
+        line-height: 130%
 
     .row
         --bs-gutter-y: 88px;
@@ -1245,7 +1377,10 @@
 
     &__content
         margin-top: 41px
-        margin-bottom: 71px
+        margin-bottom: 40px
+
+        @media screen and ( max-width: $m-md )
+            margin-bottom: 30px
 
     
     &__ul
@@ -1259,10 +1394,12 @@
             grid-template-columns: 1fr 20fr
             gap: 14px
             &::before
-                content: url('data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2234%22%20height%3D%221%22%20viewBox%3D%220%200%2034%201%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cline%20y1%3D%220.5%22%20x2%3D%2234%22%20y2%3D%220.5%22%20stroke%3D%22%23C4C4C4%22%2F%3E%0A%3C%2Fsvg%3E%0A');
+                content: ''
+                width: 29px
                 height: 1px
                 display: grid
-                margin-top: .7rem
+                background: #c4c4c4
+                margin-top: .9rem
     &__combo
         display: flex
         gap: 20px 58px
@@ -1276,3 +1413,461 @@
         max-width: 357px
 
     
+.main
+    .about__main-info 
+        .h2, .h1
+            margin-top: 0
+
+.p-404
+    background: $red
+
+    
+.p-order
+    .p-plug__block, header
+        background: $green   
+
+    .p-plug__block
+        padding-bottom: 400px !important
+        margin-bottom: -400px !important
+
+    &__block
+        margin-bottom: -530px
+
+        padding-bottom: 530px
+
+    &+.gallery
+        padding-top: 5rem
+        .h-wrapper
+            display: none
+        margin-top: -530px
+
+    &__big-text
+        font-family: 'Futura New';
+        font-size: 24px;
+        font-style: normal;
+        line-height: 30px;
+        letter-spacing: 0em;
+        text-align: left;
+
+
+
+    .catalog-back
+        @media screen and ( min-width:  $md)
+            
+            margin-left: auto
+
+
+.p-plug
+    .while-wait
+        box-sizing: content-box
+        max-width: 660px
+        color: white
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 43px;
+        letter-spacing: 0em;
+        text-align: left;
+
+    footer
+        background: white
+    .yellow
+        color: $yellow !important
+    &__block
+        padding-top: 5rem
+        color: white
+
+        @media screen and ( max-width: $md )
+            padding-top: 3rem
+            
+    &__title
+        &-small
+            font-size: 36px;
+            font-style: normal;
+            line-height: 125%;
+            letter-spacing: 0em;
+            text-align: left;
+            color: $light !important    
+            @media screen and ( max-width: $m-md )
+                font-size: 9vw
+        &-big
+            font-size: 64px;
+            font-style: normal;
+            line-height: 125%;
+            letter-spacing: 0em;
+            text-align: left;
+            @media screen and ( max-width: $lg )
+                font-size: 12vw
+
+    &__text
+        margin: 2rem 0
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+        box-sizing: content-box
+        max-width: 660px 
+
+    &__img-2
+        position: absolute
+        right: 0
+        bottom: 0
+        max-width: 23vw
+
+        @media screen and ( max-width: $md )
+            display: none
+
+.blog
+    &__categories
+        display: flex
+        gap: 5px
+        margin-bottom: 55px
+
+        &-item
+            padding: 9px 25px
+            border-radius: 3px
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 21px;
+            letter-spacing: 0em;
+            text-align: left;
+
+
+
+            &--active
+                background: $dark
+                color: white
+
+a.like-not-link
+    text-decoration: none
+
+    &:hover
+        text-decoration: underline
+    
+.custom-file-label
+    color: $red
+    display: flex
+    align-items: center
+    gap: 14px
+    margin: 20px 0 40px
+
+
+
+
+
+
+
+.policy-page__text
+    .h5, h5
+        margin-bottom: 1.5rem
+        font-weight: 400
+
+
+.filters
+    display: flex
+    gap: 60px
+    margin-bottom: 55px
+    &__item
+        font-size: 14px;
+        font-style: normal;
+        line-height: 16px;
+        letter-spacing: 0em;
+        text-align: left;
+        display: flex
+        gap: 7px
+        align-items: end
+
+        .dropdown
+
+            &-item
+                &:active
+                    background: $red
+            .btn
+                border: none
+                outline: none !important
+                background: none
+                padding: 0
+                color: $dark
+                width: unset
+
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 18px;
+                letter-spacing: 0em;
+                text-align: left;
+
+
+                &::after
+                    border: none
+                    content: url('data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%227%22%20height%3D%225%22%20viewBox%3D%220%200%207%205%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M3.49998%204.49508C3.37453%204.49508%203.24909%204.44718%203.15344%204.35158L0.143599%201.3417C-0.0478663%201.15024%20-0.0478663%200.839811%200.143599%200.648424C0.334987%200.457036%200.645353%200.457036%200.836834%200.648424L3.49998%203.31173L6.16314%200.648517C6.35461%200.457129%206.66494%200.457129%206.85632%200.648517C7.04787%200.839904%207.04787%201.15033%206.85632%201.3418L3.84652%204.35167C3.75083%204.44729%203.62539%204.49508%203.49998%204.49508Z%22%20fill%3D%22black%22%2F%3E%0A%3C%2Fsvg%3E%0A');
+                    vertical-align: 0 !important
+
+
+
+.main-benefits
+    margin-top: 85px
+    
+    .h2
+        max-width: 685px
+        margin-bottom: 85px
+        box-sizing: content-box
+
+    .row
+        align-items: center
+
+    @media screen and ( max-width: $m-md )
+        margin-top: 45px
+        .h2
+            margin-bottom: 45px
+
+
+    &__info
+        margin-top: 100px
+        gap: 70px
+        @media screen and ( max-width: $m-md )
+            gap: 35px
+            margin-top: 60px
+
+        &-text
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 42px;
+            letter-spacing: 0em;
+            text-align: left;
+
+            max-width: 595px
+            
+            @media screen and ( max-width: $m-md )
+                font-size: 26px;
+                line-height: 32px;
+
+.team
+    & + .like-banner
+        margin-top: 0
+    margin-top: 88px
+    padding-bottom: 102px
+    @media screen and ( max-width: $m-md )
+        padding-top: 45px
+        padding-bottom: 45px
+    background: $light-back
+    padding-top: 95px
+    .h2
+        margin-bottom: 61px
+
+    &__main-photo
+        width: 100%
+        margin-bottom: 93px
+        @media screen and ( max-width: $m-md )
+            margin-bottom: 65px
+
+    &-mans
+        &__name
+            margin: 24px 0 7px
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0em;
+            text-align: left;
+
+        &__post
+            color: $red
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19px;
+            letter-spacing: 0em;
+            text-align: left;
+
+.uniq-benefits
+    margin-bottom: 133px
+    @media screen and ( max-width: $m-md )
+        margin-bottom: 90px
+    .h2
+        margin-bottom: 79px 
+        @media screen and ( max-width: $m-md )
+            margin-bottom: 49px 
+
+    &__list
+        --bs-gutter-x: 140px
+        --bs-gutter-y: 79px
+        @media screen and ( max-width: $m-md )
+            --bs-gutter-y: 49px
+
+    &__subtitle
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 23px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-bottom: 19px
+
+    &__text
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+.virt-walk
+    background: $light-back
+    padding-top: 76px
+    margin-bottom: 90px
+
+    .container
+        position: relative
+        padding-bottom: 86px
+    &__img
+        position: absolute
+        right: -100px
+        bottom: 0
+        @media screen and ( max-width: $m-md )
+            display: none
+
+    .h2
+        margin-bottom: 50px
+
+    &__list
+        padding-top: 10px
+        display: flex
+        flex-direction: column
+        gap: 45px
+
+        &-item
+            display: flex
+            gap: 40px
+            .line
+                width: 60px
+                height: 1px
+                background: rgba(189, 189, 189, 1)
+
+
+    .row
+        --bs-gutter-x: 80px
+        .row
+            --bs-gutter-x: 140px
+
+.casual-slider
+    margin-bottom: 100px
+    &__item
+        padding: 0 10px
+
+        @media screen and ( min-width: $m-md )
+            padding: 0 20px
+
+        &-title
+            margin-top: 41px
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px;
+            letter-spacing: 0em;
+            
+        &-text
+            margin-top: 16px
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19px;
+            letter-spacing: 0em;
+            text-align: left;
+
+       
+.slick-slide 
+    & > *
+    width: 100%
+    margin: auto
+    img
+        width: 100%
+
+   
+
+
+
+
+.slick-arrow
+    width: 55px
+    height: 55px
+    border-radius: 50%
+    background: white !important
+    display: grid
+    place-items: center
+    margin: 0 10%
+    z-index: 100
+    grid-template-columns: 100%
+    grid-template-rows: 100%
+    &::before
+        grid-column: 1/2
+        grid-row: 1/2
+        color: black !important
+
+
+.arch-solutions
+    margin-bottom: 92px
+    .h2
+        margin-bottom: 74px
+    &__text
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;
+
+        margin-top: 26px
+
+.come
+    background: $dark
+    padding-top: 107px
+    padding-bottom: 101px
+    margin-bottom: 200px
+    color: white
+
+    .yellow
+        .hstack
+            justify-content: space-between
+            align-items: start
+        *, a
+            color: $yellow
+
+
+    .watch-scheme
+        display: flex
+        gap: 19px
+        align-items: center
+
+    .row
+        --bs-gutter-x: 40px
+
+    .col-md-6
+        position: relative
+    &__imgs
+        display: flex
+        flex-direction: column
+        position: absolute
+        z-index: 10
+        right: 0
+        top: 0
+        bottom: -200px
+        left: 0
+        padding-right: inherit;
+
+
+        &-big
+            position: relative
+
+            left: -7.5%;
+            scale: 1.15;
+            margin-top: 6%;
+            margin-bottom: 13%
+            
+
+        &-small
+            display: flex
+            gap: 40px
